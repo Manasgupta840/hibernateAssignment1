@@ -9,6 +9,7 @@ import javax.persistence.Table;
 @Table(name = "Movie_Details")
 public class Movie {
 	@Id
+	@Column(length=100)
 	private String movieID;
 	@Column
 	private String movieName;
@@ -20,7 +21,7 @@ public class Movie {
 	private Integer revenueInDollars;
 	
 	public Movie() {
-		super();
+		
 	}
 	
 	@Override
@@ -29,14 +30,14 @@ public class Movie {
 				+ releasedIn + ", revenueInDollars=" + revenueInDollars + "]";
 	}
 
-	public Movie(String movieID, String movieName, String language, Integer releasedIn, Integer revenueInDollars) {
-		super();
-		this.movieID = movieID;
-		this.movieName = movieName;
-		this.language = language;
-		this.releasedIn = releasedIn;
-		this.revenueInDollars = revenueInDollars;
-	}
+//	public Movie(String movieID, String movieName, String language, Integer releasedIn, Integer revenueInDollars) {
+//		super();
+//		this.movieID = movieID;
+//		this.movieName = movieName;
+//		this.language = language;
+//		this.releasedIn = releasedIn;
+//		this.revenueInDollars = revenueInDollars;
+//	}
 	public String getMovieID() {
 		return movieID;
 	}
